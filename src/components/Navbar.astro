@@ -1,0 +1,54 @@
+---
+interface Props {
+  activeNav?: string;
+}
+
+const { activeNav = '' } = Astro.props;
+---
+
+<header class="navbar" id="navbar" role="banner">
+  <div class="navbar__inner">
+    <a href="/" class="navbar__logo" aria-label="Ir al inicio - Fundafil - Pas">
+      <img src="/assets/logo_white.png" alt="Fundafil - Pas Logo" class="navbar__logo-img">
+    </a>
+
+    <nav class="navbar__nav" aria-label="Navegación principal">
+      <a href="/" class:list={["nav-link", { active: activeNav === 'inicio' }]} id="nav-inicio">Inicio</a>
+      
+      <div class="nav-dropdown">
+        <a href="/sobre-nosotros" class:list={["nav-link", { active: activeNav === 'nosotros' }]} id="nav-nosotros">
+          Sobre nosotros
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor" aria-hidden="true">
+            <path d="M0 0.5L5 5.5L10 0.5H0Z"/>
+          </svg>
+        </a>
+        <div class="nav-dropdown__menu">
+          <a href="/sobre-nosotros">Nuestra Historia</a>
+          <a href="/nuestro-equipo">Nuestro Equipo</a>
+        </div>
+      </div>
+
+      <a href="/programas" class:list={["nav-link", { active: activeNav === 'programas' }]} id="nav-programas">Programas</a>
+      <a href="/proyectos" class:list={["nav-link", { active: activeNav === 'proyectos' }]} id="nav-proyectos">Proyectos</a>
+      <a href="/impacto" class:list={["nav-link", { active: activeNav === 'impacto' }]} id="nav-impacto">Impacto</a>
+      <a href="/como-apoyar" class:list={["nav-link", { active: activeNav === 'apoyo' }]} id="nav-apoyo">Como Apoyar</a>
+      <a href="/contacto" class:list={["nav-link", { active: activeNav === 'contacto' }]} id="nav-contacto">Contacto</a>
+    </nav>
+
+    <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <nav class="navbar__mobile" id="mobile-menu" aria-hidden="true">
+    <a href="/" class:list={["nav-link", { active: activeNav === 'inicio' }]}>Inicio</a>
+    <a href="/sobre-nosotros" class:list={["nav-link", { active: activeNav === 'nosotros' }]}>Sobre nosotros</a>
+    <a href="/nuestro-equipo" class="nav-link">Nuestro Equipo</a>
+    <a href="/programas" class:list={["nav-link", { active: activeNav === 'programas' }]}>Programas</a>
+    <a href="/proyectos" class:list={["nav-link", { active: activeNav === 'proyectos' }]}>Proyectos</a>
+    <a href="/impacto" class:list={["nav-link", { active: activeNav === 'impacto' }]}>Impacto</a>
+    <a href="/como-apoyar" class:list={["nav-link", { active: activeNav === 'apoyo' }]}>Como Apoyar</a>
+    <a href="/contacto" class:list={["nav-link", { active: activeNav === 'contacto' }]}>Contacto</a>
+  </nav>
+</header>

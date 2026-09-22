@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Donación — Fundación Compasyon" description="Dona a Fundación Compasyon — Tu aporte transforma la vida de niños y familias en Bolivia con educación, salud y nutrición." activeNav="apoyo">
+<main class="donation-page">
+
+    <div class="container">
+
+      <!-- ═══════════════════════════════════════════════════
+           CAJA DE DONACIÓN (FIGMA SPEC)
+      ════════════════════════════════════════════════════ -->
+      <section class="donation-box" data-reveal>
+        <h1 class="donation-box__title">Apoyar a la Causa</h1>
+        <p class="donation-box__subtitle">Tu aporte puede cambiar la vida de un niño hoy</p>
+
+        <!-- Selector Frecuencia -->
+        <div class="frequency-toggle" role="group" aria-label="Frecuencia de donación">
+          <button type="button" class="freq-btn active" id="freq-once" onclick="setFrequency('once')">Una vez</button>
+          <button type="button" class="freq-btn" id="freq-monthly" onclick="setFrequency('monthly')">Mensual</button>
+        </div>
+
+        <!-- Opciones de montos en Bolivianos -->
+        <div class="amounts-grid">
+          <div class="amount-card" onclick="selectAmount(10, this)">
+            <span class="amount-card__value">10 Bs</span>
+            <span class="amount-card__desc">Material educativo</span>
+          </div>
+          <div class="amount-card active" onclick="selectAmount(50, this)">
+            <span class="amount-card__value">50 Bs</span>
+            <span class="amount-card__desc">Alimentación a un niño</span>
+          </div>
+          <div class="amount-card" onclick="selectAmount(100, this)">
+            <span class="amount-card__value">100 Bs</span>
+            <span class="amount-card__desc">Apoyo mensual a un niño</span>
+          </div>
+          <div class="amount-card" onclick="selectAmount(200, this)">
+            <span class="amount-card__value">200 Bs</span>
+            <span class="amount-card__desc">Financiamiento de proyectos</span>
+          </div>
+        </div>
+
+        <input type="number" class="custom-amount-input" id="custom-amount" placeholder="Otro monto (Bs)" min="5" oninput="clearAmountCards()">
+
+        <!-- Métodos de pago Bolivia -->
+        <div class="payment-methods">
+          <button type="button" class="pay-btn active" id="btn-pay-qr" onclick="setPayMethod('qr')">
+            <span>📱</span> QR Simple (Bolivia)
+          </button>
+          <button type="button" class="pay-btn" id="btn-pay-card" onclick="setPayMethod('card')">
+            <span>💳</span> Tarjeta / PayPal
+          </button>
+        </div>
+
+        <!-- Área de pago interactivo / QR -->
+        <div id="qr-display" style="background: white; border-radius: var(--radius-sm); padding: 24px; border: 1.5px dashed var(--blue); margin-bottom: 24px;">
+          <h4 style="color: var(--navy); margin-bottom: 12px; font-size: 1.1rem;">Escanea con tu App Bancaria</h4>
+          <p style="font-size: 0.85rem; color: var(--text-mid); margin-bottom: 16px;">
+            Habilita el pago mediante <strong>QR Simple</strong> de cualquier banco boliviano (BNB, BCP, Banco Unión, Mercantil, Fassil, Tigo Money, etc.)
+          </p>
+          <div style="width: 180px; height: 180px; margin: 0 auto; background: #EDEFF5; border-radius: 12px; display: flex; align-items: center; justify-content: center; position: relative;">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=Fundacion-Compasyon-Donacion-Bolivia" alt="QR de Donación Bolivia" style="width: 160px; height: 160px; border-radius: 8px;">
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 12px;">Titular: Fundación Compasyon / Fundafil - Pas • NIT: 1028472021</p>
+        </div>
+
+        <button type="button" class="btn btn--gold" style="width: 100%; justify-content: center; font-size: 1rem; padding: 18px;" onclick="confirmDonation()">
+          Donar ahora (<span id="btn-amount-label">50 Bs</span>)
+        </button>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════
+           ¿EN QUÉ AYUDA TU DONACIÓN? (FIGMA SPEC)
+      ════════════════════════════════════════════════════ -->
+      <section class="history-section" style="padding: 40px 0 80px;" data-reveal>
+        <div class="container" style="text-align: center;">
+          <h2 class="section-title">¿En qué ayuda tu donación?</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; margin-top: 40px;">
+            
+            <div class="team-card" style="padding: 36px 24px; text-align: center;">
+              <span style="font-size: 2.25rem; font-weight: 800; color: var(--blue); display: block; margin-bottom: 8px;">50 Bs</span>
+              <h3 style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 12px;">Material Educativo</h3>
+              <p style="color: var(--text-mid); font-size: 0.9rem; line-height: 1.6;">
+                Dota a un niño de cuadernos, libros de lectura, útiles escolares y material lúdico para su ciclo escolar.
+              </p>
+            </div>
+
+            <div class="team-card" style="padding: 36px 24px; text-align: center;">
+              <span style="font-size: 2.25rem; font-weight: 800; color: var(--gold); display: block; margin-bottom: 8px;">100 Bs</span>
+              <h3 style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 12px;">Alimentación para una semana</h3>
+              <p style="color: var(--text-mid); font-size: 0.9rem; line-height: 1.6;">
+                Cubre raciones nutricionales completas con almuerzo y refrigerio fortificado en nuestros comedores infantiles.
+              </p>
+            </div>
+
+            <div class="team-card" style="padding: 36px 24px; text-align: center;">
+              <span style="font-size: 2.25rem; font-weight: 800; color: var(--navy); display: block; margin-bottom: 8px;">200 Bs</span>
+              <h3 style="font-size: 1.15rem; color: var(--text-dark); margin-bottom: 12px;">Apoyo mensual integral</h3>
+              <p style="color: var(--text-mid); font-size: 0.9rem; line-height: 1.6;">
+                Garantiza seguimiento pediátrico, refuerzo escolar diario y acompañamiento psicológico familiar para un beneficiario.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         CTA IMPACTO
+    ════════════════════════════════════════════════════ -->
+    <section class="impact-stories" aria-label="Llamado a la acción">
+      <div class="impact-stories__bg-overlay"></div>
+      <div class="container">
+        <div class="impact-stories__content" data-reveal>
+          <div class="impact-stories__text">
+            <h2>Tu ayuda transforma vidas</h2>
+            <p>Cada aporte, por pequeño que parezca, construye puentes hacia la dignidad y la autosuficiencia en Bolivia.</p>
+            <div style="display: flex; gap: 16px; margin-top: 24px;">
+              <a href="/impacto" class="btn btn--outline-white">Ver nuestro impacto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>

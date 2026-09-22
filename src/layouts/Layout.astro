@@ -1,0 +1,43 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ScrollTop from '../components/ScrollTop.astro';
+import '../styles/styles.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  activeNav?: string;
+}
+
+const {
+  title,
+  description = "Fundación Compasyon / Fundafil - Pas — Transformando vidas de niños, jóvenes y familias en Bolivia.",
+  activeNav = ''
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={description}>
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <Navbar activeNav={activeNav} />
+
+  <slot />
+
+  <Footer />
+
+  <ScrollTop />
+
+  <script src="../scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Fundación Compasyon — Bolivia" description="Fundación Compasyon — Transformando la vida de niños y familias en Bolivia a través de proyectos sociales enfocados en educación, bienestar y apoyo comunitario." activeNav="inicio">
+<main>
+
+    <!-- ═══════════════════════════════════════════════════
+         HERO
+    ════════════════════════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Sección principal">
+      <div class="hero__inner">
+        <img src="/assets/hero_inicio.png" alt="Transformando la vida de niños y familias en Bolivia" class="hero__img" />
+        <div class="hero__bg-overlay"></div>
+        <div class="hero__content">
+          <div class="hero__text-block">
+            <h1 class="hero__title">Transformando la vida de niños y familias en Bolivia</h1>
+            <p class="hero__subtitle">Desarrollamos proyectos sociales enfocados en educación, bienestar y apoyo comunitario</p>
+          </div>
+          <div class="hero__ctas">
+            <a href="/proyectos" class="btn btn--white" id="hero-ver-proyectos">Ver Proyectos</a>
+            <a href="/como-apoyar" class="btn btn--gold" id="hero-como-apoyar">Como Apoyar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         IMPACTO — ESTADÍSTICAS
+    ════════════════════════════════════════════════════ -->
+    <section class="stats" id="impacto" aria-label="Nuestro impacto en números">
+      <div class="container">
+        <h2 class="section-title">Nuestro Impacto en Bolivia</h2>
+        <div class="stats__grid">
+          <div class="stats__item">
+            <span class="stats__number" id="stat-ninos">2,400+</span>
+            <span class="stats__label">Niños Ayudados</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__number" id="stat-comunidades">14</span>
+            <span class="stats__label">Comunidades</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__number" id="stat-proyectos">1000+</span>
+            <span class="stats__label">Proyectos Ejecutados</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__number">25 Años</span>
+            <span class="stats__label">de Trabajo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         QUIÉNES SOMOS
+    ════════════════════════════════════════════════════ -->
+    <section class="about" id="quienes-somos" aria-label="Quiénes somos">
+      <div class="container">
+        <div class="about__box">
+          <h2 class="section-title">¿Quiénes Somos?</h2>
+          <p class="about__description">
+            Lorem ipsum dolor sit amet consectetur. Risus nunc malesuada dictum netus urna in. Varius fermentum non egestas leo massa mi habitant interdum ac. Enim justo felis et sagittis orci amet elit. Auctor nisi est cras euismod. Ipsum orci mauris at habitasse fringilla. Purus dui tortor hac urna cras fusce molestie viverra. Aliquam in turpis adipiscing est in scelerisque elementum. Lobortis tristique sed purus sagittis a consectetur venenatis urna platea. Vel arcu sit adipiscing leo proin morbi eget. Leo sed dictum vestibulum eleifend eget tristique mi. Tristique consectetur purus habitant in scelerisque. Cras id eget cum est viverra enim maecenas scelerisque. Aliquet tellus purus leo quam nibh nascetur odio interdum purus. Fusce ullamcorper gravida orci lorem amet integer tincidunt integer.
+          </p>
+          <a href="/sobre-nosotros" class="btn btn--outline" id="about-ver-mas">Ver más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         PROGRAMAS
+    ════════════════════════════════════════════════════ -->
+    <section class="programs" id="programas" aria-label="Nuestros programas">
+      <div class="container">
+        <h2 class="section-title">Nuestros Programas</h2>
+        <div class="programs__grid">
+          <div class="programs__item">
+            <div class="programs__icon"></div>
+            <span class="programs__label">Juventud</span>
+          </div>
+          <div class="programs__item">
+            <div class="programs__icon"></div>
+            <span class="programs__label">Niñez</span>
+          </div>
+          <div class="programs__item">
+            <div class="programs__icon"></div>
+            <span class="programs__label">Base Hogar</span>
+          </div>
+          <div class="programs__item">
+            <div class="programs__icon"></div>
+            <span class="programs__label">Supervivencia</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         PROYECTOS DESTACADOS
+    ════════════════════════════════════════════════════ -->
+    <section class="projects" id="proyectos" aria-label="Proyectos destacados">
+      <div class="container">
+        <h2 class="section-title">Proyectos destacados</h2>
+      </div>
+      <div class="projects__carousel-wrapper">
+        <button class="carousel-btn carousel-btn--prev" id="carousel-prev" aria-label="Proyecto anterior">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="projects__track-outer">
+          <div class="projects__track" id="projects-track">
+            <article class="project-card">
+              <div class="project-card__img" style="background: url('/assets/proyecto1.png') center/cover no-repeat;"></div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Proyecto 1</h3>
+                <p class="project-card__desc">Lorem ipsum dolor sit ametwddd consectetur. Mauris in convallis leo id dignissim. Mi condimentum amet arcu siddt sit vitaed dfgfggs maecenas duis.</p>
+                <a href="/proyectos" class="btn btn--primary" id="proyecto1-ver-mas">Ver más</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-card__img" style="background: url('/assets/proyecto2.png') center/cover no-repeat;"></div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Proyecto 2</h3>
+                <p class="project-card__desc">Lorem ipsum dolor sit ametwddd consectetur. Mauris in convallis leo id dignissim. Mi condimentum amet arcu siddt sit vitaed dfgfggs maecenas duis.</p>
+                <a href="/proyectos" class="btn btn--primary" id="proyecto2-ver-mas">Ver más</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-card__img" style="background: url('/assets/proyecto3.png') center/cover no-repeat;"></div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Proyecto 3</h3>
+                <p class="project-card__desc">Lorem ipsum dolor sit ametwddd consectetur. Mauris in convallis leo id dignissim. Mi condimentum amet arcu siddt sit vitaed dfgfggs maecenas duis.</p>
+                <a href="/proyectos" class="btn btn--primary" id="proyecto3-ver-mas">Ver más</a>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-card__img" style="background: url('/assets/proyecto4.png') center/cover no-repeat;"></div>
+              <div class="project-card__body">
+                <h3 class="project-card__title">Proyecto 4</h3>
+                <p class="project-card__desc">Lorem ipsum dolor sit ametwddd consectetur. Mauris in convallis leo id dignissim. Mi condimentum amet arcu siddt sit vitaed dfgfggs maecenas duis.</p>
+                <a href="/proyectos" class="btn btn--primary" id="proyecto4-ver-mas">Ver más</a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--next" id="carousel-next" aria-label="Siguiente proyecto">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="carousel-dots" id="carousel-dots" aria-label="Indicadores de carrusel"></div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         HISTORIAS DE IMPACTO
+    ════════════════════════════════════════════════════ -->
+    <section class="impact-stories" id="historias" aria-label="Historias de impacto">
+      <div class="impact-stories__bg-overlay"></div>
+      <div class="impact-stories__content">
+        <div class="impact-stories__text">
+          <h2 class="impact-stories__title">Historias de Impacto</h2>
+          <p class="impact-stories__desc">
+            Lorem ipsum dolor sit amet consectetur. Risus nunc malesuada dictum netus urna in. Varius fermentum non egestas leo massa mi habitant interdum ac. Enim justo felis et sagittis orci amet elit. Auctor nisi est cras euismod. Ipsum orci mauris at habitasse fringilla. Purus dui tortor hac urna cras fusce molestie viverra.
+          </p>
+          <a href="/impacto" class="btn btn--outline-white" id="historias-ver-mas">Ver más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         ALIADOS
+    ════════════════════════════════════════════════════ -->
+    <section class="allies" id="aliados" aria-label="Organizaciones aliadas">
+      <div class="container">
+        <h2 class="section-title">Organizaciones que confían en nosotros</h2>
+        <div class="allies__grid">
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 1</span></div>
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 2</span></div>
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 3</span></div>
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 4</span></div>
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 5</span></div>
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 6</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         APOYO — DONACIONES & VOLUNTARIADO (FIGMA SPEC)
+    ════════════════════════════════════════════════════ -->
+    <section class="support" id="apoyo" aria-label="Como apoyar a Fundación Compasyon">
+      <div class="container">
+        <h2 class="section-title">Tu apoyo puede cambiar vidas</h2>
+        <div class="support__grid">
+          <a href="/donacion" class="support__item" id="apoyo-donaciones">
+            <div class="support__circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <span class="support__label">Donaciones</span>
+          </a>
+          <a href="/como-apoyar" class="support__item" id="apoyo-voluntariado">
+            <div class="support__circle">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <span class="support__label">Voluntariado</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>

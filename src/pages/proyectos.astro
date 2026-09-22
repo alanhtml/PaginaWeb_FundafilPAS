@@ -1,0 +1,223 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Proyectos — Fundación Compasyon" description="Proyectos de Fundación Compasyon — Conoce nuestras iniciativas activas y finalizadas en salud, educación, protección y desarrollo comunitario en Bolivia." activeNav="proyectos">
+<main class="projects-page">
+
+    <!-- ═══════════════════════════════════════════════════
+         TÍTULO DE PROYECTOS
+    ════════════════════════════════════════════════════ -->
+    <div class="container">
+      <div class="projects-hero" data-reveal>
+        <h1 class="projects-hero__title">Proyectos</h1>
+        <p class="projects-hero__subtitle">
+          Iniciativas concretas con objetivos medibles para generar cambios sostenibles en la niñez, juventud y familias de Bolivia.
+        </p>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════
+           GRILLA DE PROYECTOS ACTIVOS (FIGMA SPEC)
+      ════════════════════════════════════════════════════ -->
+      <div class="projects-grid">
+
+        <!-- Proyecto 1 -->
+        <article class="project-detail-card" id="capacitacion" data-reveal data-reveal-delay="1">
+          <div class="project-detail-card__img-wrap">
+            <img src="/assets/proyecto1.png" alt="Capacitación y desarrollo" class="project-detail-card__img" loading="lazy">
+            <span class="project-detail-card__tag">Educación</span>
+          </div>
+          <div class="project-detail-card__body">
+            <h2 class="project-detail-card__title">Capacitación y desarrollo de Habilidades</h2>
+            
+            <div class="project-detail-card__meta">
+              <div class="project-detail-card__meta-item">
+                <strong>Objetivo</strong>
+                <span>Formación técnica y vocacional</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Beneficiarios</strong>
+                <span>350 Jóvenes</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Ubicación</strong>
+                <span>El Alto, La Paz</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Duración</strong>
+                <span>12 Meses</span>
+              </div>
+            </div>
+
+            <p class="project-detail-card__desc">
+              Capacitación integral en competencias digitales, talleres prácticos y habilidades para la vida, facilitando la inserción laboral de adolescentes en situación vulnerable.
+            </p>
+
+            <div class="project-detail-card__actions">
+              <a href="/donacion" class="btn btn--gold">Apoyar este proyecto</a>
+              <a href="#capacitacion" class="btn btn--outline">Ver proyecto completo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 2 -->
+        <article class="project-detail-card" id="salud" data-reveal data-reveal-delay="2">
+          <div class="project-detail-card__img-wrap">
+            <img src="/assets/proyecto2.png" alt="Salud Integral" class="project-detail-card__img" loading="lazy">
+            <span class="project-detail-card__tag">Salud</span>
+          </div>
+          <div class="project-detail-card__body">
+            <h2 class="project-detail-card__title">Salud Integral</h2>
+            
+            <div class="project-detail-card__meta">
+              <div class="project-detail-card__meta-item">
+                <strong>Objetivo</strong>
+                <span>Atención médica preventiva</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Beneficiarios</strong>
+                <span>600 Niños y Madres</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Ubicación</strong>
+                <span>Comunidades Rurales</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Duración</strong>
+                <span>Continuo (Anual)</span>
+              </div>
+            </div>
+
+            <p class="project-detail-card__desc">
+              Brigadas odontológicas y pediátricas, entrega de suplementos nutricionales y talleres de higiene y salud comunitaria para prevenir enfermedades infantiles crónicas.
+            </p>
+
+            <div class="project-detail-card__actions">
+              <a href="/donacion" class="btn btn--gold">Apoyar este proyecto</a>
+              <a href="#salud" class="btn btn--outline">Ver proyecto completo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 3 -->
+        <article class="project-detail-card" id="emprendimiento" data-reveal data-reveal-delay="3">
+          <div class="project-detail-card__img-wrap">
+            <img src="/assets/proyecto3.png" alt="Emprendimiento" class="project-detail-card__img" loading="lazy">
+            <span class="project-detail-card__tag">Desarrollo</span>
+          </div>
+          <div class="project-detail-card__body">
+            <h2 class="project-detail-card__title">Emprendimiento y Generación de ingresos</h2>
+            
+            <div class="project-detail-card__meta">
+              <div class="project-detail-card__meta-item">
+                <strong>Objetivo</strong>
+                <span>Sustento familiar sostenible</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Beneficiarios</strong>
+                <span>200 Familias</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Ubicación</strong>
+                <span>Zona Oro Negro</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Duración</strong>
+                <span>18 Meses</span>
+              </div>
+            </div>
+
+            <p class="project-detail-card__desc">
+              Capacitación en gestión de pequeños negocios, microcréditos asociativos y comercialización de productos artesanales y de repostería para madres cabeza de hogar.
+            </p>
+
+            <div class="project-detail-card__actions">
+              <a href="/donacion" class="btn btn--gold">Apoyar este proyecto</a>
+              <a href="#emprendimiento" class="btn btn--outline">Ver proyecto completo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 4 -->
+        <article class="project-detail-card" id="proteccion" data-reveal data-reveal-delay="4">
+          <div class="project-detail-card__img-wrap">
+            <img src="/assets/proyecto4.png" alt="Protección Infantil" class="project-detail-card__img" loading="lazy">
+            <span class="project-detail-card__tag">Protección</span>
+          </div>
+          <div class="project-detail-card__body">
+            <h2 class="project-detail-card__title">Protección Infantil</h2>
+            
+            <div class="project-detail-card__meta">
+              <div class="project-detail-card__meta-item">
+                <strong>Objetivo</strong>
+                <span>Prevención de violencia y abuso</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Beneficiarios</strong>
+                <span>450 Niños y Cuidadores</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Ubicación</strong>
+                <span>Centros Filpas</span>
+              </div>
+              <div class="project-detail-card__meta-item">
+                <strong>Duración</strong>
+                <span>Permanente</span>
+              </div>
+            </div>
+
+            <p class="project-detail-card__desc">
+              Espacios protectores seguros, asesoramiento legal a familias, apoyo psicológico especializado y campañas comunitarias para salvaguardar los derechos infantiles.
+            </p>
+
+            <div class="project-detail-card__actions">
+              <a href="/donacion" class="btn btn--gold">Apoyar este proyecto</a>
+              <a href="#proteccion" class="btn btn--outline">Ver proyecto completo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         PROYECTOS FINALIZADOS (FIGMA SPEC)
+    ════════════════════════════════════════════════════ -->
+    <section class="finished-projects" aria-label="Proyectos finalizados">
+      <div class="container">
+        <h2 class="section-title" data-reveal>Proyectos finalizados</h2>
+
+        <div class="finished-projects__grid">
+          <div class="finished-card" data-reveal data-reveal-delay="1">
+            <h3 class="finished-card__title">Proyecto 1</h3>
+            <p class="finished-card__desc">
+              Mejora de infraestructura sanitaria y dotación de agua segura en 3 escuelas de El Alto, beneficiando a más de 800 escolares.
+            </p>
+            <a href="/impacto" class="btn btn--outline btn--sm" style="align-self: flex-start;">Ver resultados</a>
+          </div>
+
+          <div class="finished-card" data-reveal data-reveal-delay="2">
+            <h3 class="finished-card__title">Proyecto 2</h3>
+            <p class="finished-card__desc">
+              Campaña de vacunación y nutrición infantil de emergencia durante los periodos de bajas temperaturas en el altiplano boliviano.
+            </p>
+            <a href="/impacto" class="btn btn--outline btn--sm" style="align-self: flex-start;">Ver resultados</a>
+          </div>
+
+          <div class="finished-card" data-reveal data-reveal-delay="3">
+            <h3 class="finished-card__title">Proyecto 3</h3>
+            <p class="finished-card__desc">
+              Equipamiento de bibliotecas comunitarias y centros de cómputo con conectividad para niñas y niños de zonas periurbanas.
+            </p>
+            <a href="/impacto" class="btn btn--outline btn--sm" style="align-self: flex-start;">Ver resultados</a>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;" data-reveal>
+          <a href="/impacto" class="btn btn--primary">Ver todos los proyectos</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>

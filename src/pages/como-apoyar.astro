@@ -1,0 +1,155 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Cómo Apoyar — Fundación Compasyon" description="Cómo Apoyar — Donaciones y Voluntariado en Fundación Compasyon / Fundafil - Pas Bolivia." activeNav="apoyo">
+<main class="donation-page">
+
+    <div class="container">
+
+      <!-- ═══════════════════════════════════════════════════
+           APOYAR A LA CAUSA (DONACIONES)
+      ════════════════════════════════════════════════════ -->
+      <section class="donation-box" id="donacion" data-reveal>
+        <h1 class="donation-box__title">Apoyar a la Causa</h1>
+        <p class="donation-box__subtitle">Tu aporte puede cambiar la vida de un niño hoy</p>
+
+        <div class="frequency-toggle" role="group">
+          <button type="button" class="freq-btn active" id="ca-freq-once" onclick="setFrequency('once')">Una vez</button>
+          <button type="button" class="freq-btn" id="ca-freq-monthly" onclick="setFrequency('monthly')">Mensual</button>
+        </div>
+
+        <div class="amounts-grid">
+          <div class="amount-card" onclick="selectAmount(10, this)">
+            <span class="amount-card__value">10 Bs</span>
+            <span class="amount-card__desc">Material educativo</span>
+          </div>
+          <div class="amount-card active" onclick="selectAmount(50, this)">
+            <span class="amount-card__value">50 Bs</span>
+            <span class="amount-card__desc">Alimentación a un niño</span>
+          </div>
+          <div class="amount-card" onclick="selectAmount(100, this)">
+            <span class="amount-card__value">100 Bs</span>
+            <span class="amount-card__desc">Apoyo mensual a un niño</span>
+          </div>
+          <div class="amount-card" onclick="selectAmount(200, this)">
+            <span class="amount-card__value">200 Bs</span>
+            <span class="amount-card__desc">Financiamiento de proyectos</span>
+          </div>
+        </div>
+
+        <input type="number" class="custom-amount-input" id="ca-custom-amount" placeholder="Otro monto (Bs)" min="5" oninput="clearAmountCards()">
+
+        <a href="/donacion" class="btn btn--gold" style="width: 100%; justify-content: center; font-size: 1rem; padding: 18px;">
+          Donar ahora (<span id="ca-amount-label">50 Bs</span>)
+        </a>
+      </section>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         VOLUNTARIADO (FIGMA SPEC)
+    ════════════════════════════════════════════════════ -->
+    <section class="volunteer-section" id="voluntariado" aria-label="Voluntariado">
+      <div class="container">
+        <div class="volunteer-grid">
+          
+          <div data-reveal>
+            <h2 class="section-title section-title--left" style="margin-bottom: 16px;">¿Cómo ser voluntario en Fundafil - Pas?</h2>
+            <p style="color: var(--text-mid); font-size: 1.05rem; line-height: 1.8; margin-bottom: 32px;">
+              Sé parte del cambio y ayuda directamente en nuestras actividades. Tu tiempo y vocación transforman comunidades.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">✓</div>
+                <div>
+                  <strong style="color: var(--navy); font-size: 1rem;">Apoya en talleres educativos</strong>
+                  <p style="color: var(--text-mid); font-size: 0.875rem;">Refuerzo escolar, artes, computación e idiomas.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--blue); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">✓</div>
+                <div>
+                  <strong style="color: var(--navy); font-size: 1rem;">Participa en actividades comunitarias</strong>
+                  <p style="color: var(--text-mid); font-size: 0.875rem;">Brigadas de salud, comedores y eventos comunitarios.</p>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 16px;">
+                <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--gold); color: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 1.2rem;">★</div>
+                <div>
+                  <strong style="color: var(--navy); font-size: 1rem;">Requisitos</strong>
+                  <p style="color: var(--text-mid); font-size: 0.875rem;">Ser mayor de 18 años y contar con vocación de servicio.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulario de voluntariado -->
+          <form class="volunteer-form" data-reveal data-reveal-delay="1" onsubmit="event.preventDefault(); alert('¡Gracias por postularte! Nos comunicaremos contigo en breve.'); this.reset();">
+            <h3 style="color: var(--navy); font-size: 1.3rem;">Formulario de Voluntario</h3>
+
+            <div class="form-group">
+              <label for="vol-email">Correo Electrónico *</label>
+              <input type="email" id="vol-email" class="form-input" placeholder="ejemplo@correo.com" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label for="vol-name">Nombres *</label>
+                <input type="text" id="vol-name" class="form-input" placeholder="Tus nombres" required>
+              </div>
+              <div class="form-group">
+                <label for="vol-lastname">Apellidos *</label>
+                <input type="text" id="vol-lastname" class="form-input" placeholder="Tus apellidos" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="vol-interest">Número de teléfono / Área de interés *</label>
+              <input type="text" id="vol-interest" class="form-input" placeholder="+591 ... / Educación, Salud, etc." required>
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center; padding: 16px; margin-top: 8px;">
+              Enviar formulario
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         TRANSPARENCIA (FIGMA SPEC)
+    ════════════════════════════════════════════════════ -->
+    <section class="history-section" style="background: var(--white);" data-reveal>
+      <div class="container" style="text-align: center;">
+        <h2 class="section-title">Transparencia</h2>
+        <p style="color: var(--text-mid); font-size: 1.1rem; margin-top: 12px; margin-bottom: 48px;">
+          Tus donaciones son seguras y transparentes
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 900px; margin: 0 auto;">
+          <div class="team-card" style="padding: 36px 28px; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 12px;">🛡️</div>
+            <h3 style="color: var(--navy); font-size: 1.15rem; margin-bottom: 8px;">Más de 20 años trabajando</h3>
+            <p style="color: var(--text-mid); font-size: 0.9375rem; line-height: 1.6;">
+              Ayudando a niños, adolescentes y familias bolivianas con respaldo legal y comunitario permanente.
+            </p>
+          </div>
+
+          <div class="team-card" style="padding: 36px 28px; text-align: center;">
+            <div style="font-size: 2.5rem; margin-bottom: 12px;">📊</div>
+            <h3 style="color: var(--navy); font-size: 1.15rem; margin-bottom: 8px;">Rendición de Cuentas</h3>
+            <p style="color: var(--text-mid); font-size: 0.9375rem; line-height: 1.6;">
+              Reportamos el uso y el impacto medible de cada donación a través de auditorías e informes públicos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>

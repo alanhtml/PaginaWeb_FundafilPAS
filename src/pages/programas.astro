@@ -1,0 +1,167 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Nuestros Programas — Fundación Compasyon" description="Programas de Fundación Compasyon — Conoce nuestras áreas de acción: Juventud, Niñez, 1ra Infancia y Red Hogar en Bolivia." activeNav="programas">
+<main class="programs-page">
+
+    <!-- ═══════════════════════════════════════════════════
+         TÍTULO Y PRESENTACIÓN DE PROGRAMAS
+    ════════════════════════════════════════════════════ -->
+    <div class="container">
+      <div class="programs-page__header" data-reveal>
+        <h1 class="programs-page__title">Nuestros Programas</h1>
+        <p class="programs-page__subtitle">
+          Desarrollamos iniciativas integrales enfocadas en cada etapa clave de la vida. Nuestro objetivo es romper el ciclo de la pobreza brindando educación, nutrición, protección y acompañamiento familiar en Bolivia.
+        </p>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════
+           GRILLA DE 4 PROGRAMAS (FIGMA CARDS 2x2)
+      ════════════════════════════════════════════════════ -->
+      <div class="programs-page__grid">
+
+        <!-- 1. JUVENTUD -->
+        <article class="program-card-large" id="juventud" data-reveal data-reveal-delay="1">
+          <img src="/assets/juventud.png"
+               alt="Programa Juventud - Formación y Liderazgo" class="program-card-large__bg" loading="lazy">
+          <div class="program-card-large__overlay"></div>
+          <div class="program-card-large__content">
+            <h2 class="program-card-large__title">Juventud</h2>
+            <p class="program-card-large__desc">
+              Empoderamos a adolescentes y jóvenes con formación técnica, liderazgo comunitario, becas y habilidades digitales para su inserción laboral digna.
+            </p>
+            <div class="program-card-large__stat">
+              <strong>+800</strong> <span>Jóvenes beneficiarios</span>
+            </div>
+            <div class="program-card-large__actions">
+              <a href="/programa-juventud" class="btn btn--white">Conocer programa</a>
+              <a href="/como-apoyar" class="btn btn--outline-white">Apoyar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. NIÑEZ -->
+        <article class="program-card-large" id="ninez" data-reveal data-reveal-delay="2">
+          <img src="/assets/ninez.png"
+               alt="Programa Niñez - Refuerzo y Nutrición" class="program-card-large__bg" loading="lazy">
+          <div class="program-card-large__overlay"></div>
+          <div class="program-card-large__content">
+            <h2 class="program-card-large__title">Niñez</h2>
+            <p class="program-card-large__desc">
+              Apoyo escolar personalizado, alimentación nutritiva, chequeos médicos preventivos y espacios lúdicos seguros para niños en edad escolar.
+            </p>
+            <div class="program-card-large__stat">
+              <strong>+1000</strong> <span>Niños beneficiarios</span>
+            </div>
+            <div class="program-card-large__actions">
+              <a href="/programa-ninez" class="btn btn--white">Conocer programa</a>
+              <a href="/como-apoyar" class="btn btn--outline-white">Apoyar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. 1RA INFANCIA -->
+        <article class="program-card-large" id="infancia" data-reveal data-reveal-delay="3">
+          <img src="/assets/primera_infancia.png"
+               alt="Programa 1ra Infancia - Estimulación y Salud" class="program-card-large__bg" loading="lazy">
+          <div class="program-card-large__overlay"></div>
+          <div class="program-card-large__content">
+            <h2 class="program-card-large__title">1ra Infancia</h2>
+            <p class="program-card-large__desc">
+              Atención médica temprana, suplementación nutricional y estimulación cognitiva en los primeros años de vida, asegurando un desarrollo cerebral óptimo.
+            </p>
+            <div class="program-card-large__stat">
+              <strong>+300</strong> <span>Bebés beneficiarios</span>
+            </div>
+            <div class="program-card-large__actions">
+              <a href="/programa-infancia" class="btn btn--white">Conocer programa</a>
+              <a href="/como-apoyar" class="btn btn--outline-white">Apoyar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. RED HOGAR -->
+        <article class="program-card-large" id="red-hogar" data-reveal data-reveal-delay="4">
+          <img src="/assets/red_hogar.png"
+               alt="Programa Red Hogar - Familias Fuertes" class="program-card-large__bg" loading="lazy">
+          <div class="program-card-large__overlay"></div>
+          <div class="program-card-large__content">
+            <h2 class="program-card-large__title">Red Hogar</h2>
+            <p class="program-card-large__desc">
+              Escuela para padres, apoyo psicológico, prevención de la violencia y capacitación en emprendimiento familiar para fortalecer el núcleo del hogar.
+            </p>
+            <div class="program-card-large__stat">
+              <strong>+500</strong> <span>Familias beneficiarias</span>
+            </div>
+            <div class="program-card-large__actions">
+              <a href="/programa-red-hogar" class="btn btn--white">Conocer programa</a>
+              <a href="/como-apoyar" class="btn btn--outline-white">Apoyar</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         DETALLES AMPLIADOS DE CADA PROGRAMA
+    ════════════════════════════════════════════════════ -->
+    <section class="team-section" style="background: var(--bg-light);" aria-label="Detalles de programas">
+      <div class="container">
+        <h2 class="section-title" data-reveal>¿Cómo trabajamos en cada eje?</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px;">
+          
+          <div id="detalle-juventud" class="team-card" style="padding: 30px; text-align: left;" data-reveal>
+            <h3 style="color: var(--blue); font-size: 1.25rem; margin-bottom: 12px;">Eje Juventud</h3>
+            <p style="color: var(--text-mid); font-size: 0.9375rem; line-height: 1.7;">
+              Proporcionamos mentoría personalizada, cursos certificados en oficios prácticos, computación e inglés básico, fomentando la independencia económica y valores ciudadanos.
+            </p>
+          </div>
+
+          <div id="detalle-ninez" class="team-card" style="padding: 30px; text-align: left;" data-reveal data-reveal-delay="1">
+            <h3 style="color: var(--blue); font-size: 1.25rem; margin-bottom: 12px;">Eje Niñez</h3>
+            <p style="color: var(--text-mid); font-size: 0.9375rem; line-height: 1.7;">
+              Centros comunitarios con refuerzo escolar diario para prevenir la deserción escolar, comedor infantil con dietas supervisadas y actividades deportivas y artísticas.
+            </p>
+          </div>
+
+          <div id="detalle-infancia" class="team-card" style="padding: 30px; text-align: left;" data-reveal data-reveal-delay="2">
+            <h3 style="color: var(--blue); font-size: 1.25rem; margin-bottom: 12px;">Eje 1ra Infancia</h3>
+            <p style="color: var(--text-mid); font-size: 0.9375rem; line-height: 1.7;">
+              Acompañamiento a madres gestantes y lactantes, dotación de paquetes alimenticios y seguimiento al crecimiento antropométrico para erradicar la desnutrición crónica.
+            </p>
+          </div>
+
+          <div id="detalle-hogar" class="team-card" style="padding: 30px; text-align: left;" data-reveal data-reveal-delay="3">
+            <h3 style="color: var(--blue); font-size: 1.25rem; margin-bottom: 12px;">Eje Red Hogar</h3>
+            <p style="color: var(--text-mid); font-size: 0.9375rem; line-height: 1.7;">
+              Microcréditos solidarios, talleres de finanzas familiares y círculos de apoyo para padres y madres solteras, creando hogares seguros y sostenibles.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         CTA FINAL
+    ════════════════════════════════════════════════════ -->
+    <section class="impact-stories" aria-label="Llamado a la acción">
+      <div class="impact-stories__bg-overlay"></div>
+      <div class="container">
+        <div class="impact-stories__content" data-reveal>
+          <div class="impact-stories__text">
+            <h2>¿Quieres apadrinar o apoyar un programa?</h2>
+            <p>Con tu aporte mensual o voluntariado permites que más niños y familias en Bolivia continúen recibiendo atención integral.</p>
+            <div style="display: flex; gap: 16px; margin-top: 24px; flex-wrap: wrap;">
+              <a href="/como-apoyar" class="btn btn--gold">Cómo Apoyar</a>
+              <a href="/contacto" class="btn btn--outline-white">Contáctanos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>

@@ -1,0 +1,178 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Impacto — Fundación Compasyon" description="Impacto — Conoce las estadísticas, hitos históricos y crecimiento de Fundación Compasyon / Fundafil - Pas desde 2003 al 2025 en Bolivia." activeNav="impacto">
+<main class="impact-page">
+
+    <div class="container">
+
+      <!-- ═══════════════════════════════════════════════════
+           HERO DE IMPACTO (FIGMA SPEC)
+      ════════════════════════════════════════════════════ -->
+      <div class="contact-hero" data-reveal>
+        <h1 class="projects-hero__title">Nuestro Impacto</h1>
+        <p class="projects-hero__subtitle" style="font-weight: 600; color: var(--blue);">
+          Estadísticas del 2003 al 2025
+        </p>
+        <p style="color: var(--text-mid); font-size: 0.95rem; margin-top: 8px;">
+          Más de dos décadas transformando vidas en Bolivia mediante proyectos de alta sostenibilidad y amor al prójimo.
+        </p>
+      </div>
+
+      <!-- Métricas Clave -->
+      <div class="stats__grid" style="margin: 40px 0 70px;" data-reveal>
+        <div class="stats__item">
+          <span class="stats__number" style="color: var(--blue);">Más de 2,400</span>
+          <span class="stats__label">Niños beneficiarios</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number" style="color: var(--gold);">14</span>
+          <span class="stats__label">Comunidades en La Paz</span>
+        </div>
+        <div class="stats__item">
+          <span class="stats__number" style="color: var(--navy);">Más de 1000</span>
+          <span class="stats__label">Proyectos ejecutados con éxito</span>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════
+           HITOS HISTÓRICOS (FIGMA SPEC: 2003, 2015, 2021)
+      ════════════════════════════════════════════════════ -->
+      <section style="margin-bottom: 80px;" data-reveal>
+        <h2 class="section-title" style="margin-bottom: 36px;">Hitos de Nuestra Trayectoria</h2>
+        <div class="impact-timeline">
+          
+          <div class="timeline-card" data-reveal data-reveal-delay="1">
+            <div class="timeline-year">2003</div>
+            <div class="timeline-text">Creación de la fundación</div>
+            <p style="color: var(--text-mid); font-size: 0.85rem; margin-top: 10px;">Iniciamos labores en El Alto atendiendo a los primeros grupos de niños en situación de desnutrición.</p>
+          </div>
+
+          <div class="timeline-card" data-reveal data-reveal-delay="2">
+            <div class="timeline-year">2015</div>
+            <div class="timeline-text">Primera expansión</div>
+            <p style="color: var(--text-mid); font-size: 0.85rem; margin-top: 10px;">Apertura de nuevos centros de desarrollo comunitario y consolidación de la Red Hogar.</p>
+          </div>
+
+          <div class="timeline-card" data-reveal data-reveal-delay="3">
+            <div class="timeline-year">2021</div>
+            <div class="timeline-text">Más de 1000 proyectos realizados</div>
+            <p style="color: var(--text-mid); font-size: 0.85rem; margin-top: 10px;">Alcanzamos una cobertura récord con proyectos de educación, salud y nutrición permanente.</p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════
+         GRÁFICOS DE CRECIMIENTO (FIGMA SPEC)
+    ════════════════════════════════════════════════════ -->
+    <section class="growth-charts" aria-label="Gráficos de crecimiento">
+      <div class="container">
+        <h2 class="section-title" data-reveal>Nuestro Crecimiento</h2>
+        
+        <div class="charts-grid">
+          
+          <!-- Gráfico 1: Beneficiarios -->
+          <div class="chart-box" data-reveal data-reveal-delay="1">
+            <h3>Crecimiento de Beneficiarios (2003 - 2025)</h3>
+            <div class="bar-chart">
+              <div class="bar-column">
+                <span class="bar-val">100</span>
+                <div class="bar-fill" style="height: 15%;"></div>
+                <span class="bar-label">2003</span>
+              </div>
+              <div class="bar-column">
+                <span class="bar-val">250</span>
+                <div class="bar-fill" style="height: 25%;"></div>
+                <span class="bar-label">2005</span>
+              </div>
+              <div class="bar-column">
+                <span class="bar-val">600</span>
+                <div class="bar-fill" style="height: 40%;"></div>
+                <span class="bar-label">2010</span>
+              </div>
+              <div class="bar-column">
+                <span class="bar-val">1000</span>
+                <div class="bar-fill" style="height: 60%;"></div>
+                <span class="bar-label">2015</span>
+              </div>
+              <div class="bar-column">
+                <span class="bar-val">1800</span>
+                <div class="bar-fill" style="height: 80%;"></div>
+                <span class="bar-label">2020</span>
+              </div>
+              <div class="bar-column">
+                <span class="bar-val" style="color: var(--gold);">2500</span>
+                <div class="bar-fill bar-fill--gold" style="height: 100%;"></div>
+                <span class="bar-label">2025</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gráfico 2: Proyectos por Año -->
+          <div class="chart-box" data-reveal data-reveal-delay="2">
+            <h3>Proyectos por Año (Acumulado)</h3>
+            <div class="bar-chart">
+              <div class="bar-column">
+                <span class="bar-val">10</span>
+                <div class="bar-fill" style="height: 12%;"></div>
+                <span class="bar-label">2003</span>
+              </div>
+              <div class="bar-column">
+                <span class="bar-val">45</span>
+                <div class="bar-fill" style="height: 20%;"></div>
+                <span class="bar-label">2005</span>
+              </div>
+              <div class="bar-column">
+                <span class="bar-val">150</span>
+                <div class="bar-fill" style="height: 35%;"></div>
+                <span class="bar-label">2010</span>
+              </div>
+              <div class="bar-column">
+                <span class="bar-val">450</span>
+                <div class="bar-fill" style="height: 55%;"></div>
+                <span class="bar-label">2015</span>
+              </div>
+              <div class="bar-column">
+                <span class="bar-val">750</span>
+                <div class="bar-fill" style="height: 75%;"></div>
+                <span class="bar-label">2020</span>
+              </div>
+              <div class="bar-column">
+                <span class="bar-val" style="color: var(--gold);">1000</span>
+                <div class="bar-fill bar-fill--gold" style="height: 100%;"></div>
+                <span class="bar-label">2025</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         ORGANIZACIONES QUE CONFÍAN EN NOSOTROS (FIGMA SPEC)
+    ════════════════════════════════════════════════════ -->
+    <section class="allies" aria-label="Aliados">
+      <div class="container">
+        <h2 class="section-title" data-reveal>Organizaciones que confían en nosotros</h2>
+        <p style="color: var(--text-mid); text-align: center; margin-top: 12px; margin-bottom: 40px;" data-reveal>
+          Trabajamos junto a aliados estratégicos para generar mayor impacto
+        </p>
+
+        <div class="allies__grid" data-reveal>
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 1</span></div>
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 2</span></div>
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 3</span></div>
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 4</span></div>
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 5</span></div>
+          <div class="allies__item"><div class="allies__logo" style="background: #888888;"></div><span class="allies__name">Aliado 6</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</Layout>
